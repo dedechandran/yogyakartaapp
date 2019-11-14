@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.movie.MovieDetailActivity">
+
+
+    <View
+        android:id="@+id/imageView_movieDetail_placeHolder"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/colorDarkGrey"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/padding_all_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imageView_movieDetail_placeHolder"
+        app:layout_constraintStart_toStartOf="@id/imageView_movieDetail_placeHolder"
+        app:layout_constraintTop_toBottomOf="@id/imageView_movieDetail_placeHolder">
+
+
+        <TextView
+            android:id="@+id/textView_movieDetail_titlePlaceHolder"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkGrey"
+            app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_datePlaceHolder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_movieDetail_datePlaceHolder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_all_8dp"
+            android:background="@color/colorDarkGrey"
+            app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_durationPlaceHolder"
+            app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_titlePlaceHolder"
+            app:layout_constraintStart_toStartOf="@id/textView_movieDetail_titlePlaceHolder"
+            app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_titlePlaceHolder" />
+
+        <TextView
+            android:id="@+id/textView_movieDetail_durationPlaceHolder"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_all_8dp"
+            android:background="@color/colorDarkGrey"
+            android:layout_marginTop="@dimen/margin_all_8dp"
+            app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_budgetPlaceHolder"
+            app:layout_constraintEnd_toStartOf="@id/textView_movieDetail_languagePlaceHolder"
+            app:layout_constraintStart_toStartOf="@id/textView_movieDetail_datePlaceHolder"
+            app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_datePlaceHolder" />
+
+        <TextView
+            android:id="@+id/textView_movieDetail_languagePlaceHolder"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkGrey"
+            app:layout_constraintBottom_toBottomOf="@id/textView_movieDetail_durationPlaceHolder"
+            app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_datePlaceHolder"
+            app:layout_constraintStart_toEndOf="@id/textView_movieDetail_durationPlaceHolder"
+            app:layout_constraintTop_toTopOf="@id/textView_movieDetail_durationPlaceHolder" />
+
+
+        <TextView
+            android:id="@+id/textView_movieDetail_budgetPlaceHolder"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_all_8dp"
+            android:layout_marginEnd="@dimen/margin_all_8dp"
+            android:background="@color/colorDarkGrey"
+            app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_durationPlaceHolder"
+            app:layout_constraintEnd_toStartOf="@id/textView_movieDetail_revenuePlaceHolder"
+            app:layout_constraintStart_toStartOf="@id/textView_movieDetail_durationPlaceHolder"
+            app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_durationPlaceHolder" />
+
+        <TextView
+            android:id="@+id/textView_movieDetail_revenuePlaceHolder"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorDarkGrey"
+            app:layout_constraintBottom_toBottomOf="@id/textView_movieDetail_budgetPlaceHolder"
+            app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_languagePlaceHolder"
+            app:layout_constraintStart_toEndOf="@id/textView_movieDetail_budgetPlaceHolder"
+            app:layout_constraintTop_toTopOf="@id/textView_movieDetail_budgetPlaceHolder" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

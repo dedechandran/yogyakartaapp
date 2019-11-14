@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_sign_in">Sign In</string>
+    <string name="login_dont_have_an_account">Don\'t have an account?</string>
+    <string name="login_sign_up">Sign Up</string>
+    <string name="register_email">Email</string>
+    <string name="register_sign_up">Sign Up</string>
+    <string name="all_request_error_message">There is something wrong</string>
+    <string name="detail_duration_label">Duration</string>
+    <string name="detail_language_label">Language</string>
+    <string name="detail_budget_label">Budget</string>
+    <string name="detail_revenue_label">Revenue</string>
+    <string name="detail_overview_label">Overview</string>
+    <string name="detail_genres_label">Genres</string>
+    <string name="menu_account">Account</string>
+    <string name="account_profile">Profile</string>
+    <string name="dummy_profile_name">Dede Chandra Nugraha</string>
+    <string name="dummy_profile_email">dede@gmail.com</string>
+    <string name="account_turn_on_the_map">Turn On The Map</string>
+    <string name="account_your_location">Your Location</string>
+    <string name="detail_title">Detail</string>
+    <string name="account_title">Account</string>
+    <string name="account_my_location">My Location</string>
+    <string name="splash_yogyakarta">Yogyakarta</string>
+    <string name="login_yogyakarta">Yogyakarta</string>
+    <string name="account_message_permission_blocked">Permission Blocked</string>
+</resources>

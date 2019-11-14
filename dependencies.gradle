@@ -1,0 +1,42 @@
+ext {
+    // AndroidX Version
+    androidXVersion = '1.0.0'
+    androidXTestVersion = '1.1.0'
+    androidXAnnotationsVersion = '1.0.1'
+    androidXLegacySupportVersion = '1.0.0'
+    androidXAppCompatVersion = '1.1.0'
+    androidXRecyclerViewVersion = '1.0.0'
+    androidXConstraintLayoutVersion = '1.1.3'
+    androidXCardViewVersion = '1.0.0'
+    androidXLifeCycleVersion = '2.1.0'
+    androidXIdleResourceVersion = '3.2.0'
+
+    // Dagger Version
+    daggerVersion = '2.25.2'
+
+    materialVersion = '1.0.0'
+    shimmerVersion = '0.5.0'
+    flexBoxVersion = '1.1.1'
+
+    // Test Version
+    junitVersion = '4.12'
+    hamcrestVersion = '1.3'
+    mockitoVersion = '2.23.4'
+    mockitoKotlinVersion = '2.2.0'
+    espressoVersion = '3.1.0'
+    dexMakerVersion = "1.2"
+
+    // Glide Version
+    glideVersion = '4.9.0'
+
+    // Retrofit Version
+    retrofitVersion = '2.6.2'
+
+    // OkHttp Version
+    okHttpVersion = '4.2.2'
+
+    // GMS Version
+    gmsLocationVersion = '17.0.0'
+    gmsMapsVersion = '17.0.0'
+
+}

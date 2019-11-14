@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.movie.MovieDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar_movieDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/imageView_movieDetail_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY"
+                app:layout_collapseMode="parallax"
+                tools:src="@color/colorAccent" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_movieDetail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_all_8dp">
+
+            <TextView
+                android:id="@+id/textView_movieDetail_title"
+                style="@style/TextAppearance.MaterialComponents.Headline4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_all_8dp"
+                app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="The walking Dead aaaaaaa" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_all_8dp"
+                app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_durationLabel"
+                app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_title"
+                app:layout_constraintStart_toStartOf="@id/textView_movieDetail_title"
+                app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_title"
+                tools:text="2019-10-20" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_durationLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_all_8dp"
+                app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_duration"
+                app:layout_constraintEnd_toStartOf="@id/textView_movieDetail_languageLabel"
+                app:layout_constraintStart_toStartOf="@id/textView_movieDetail_date"
+                app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_date"
+                tools:text="Duration" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_languageLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/textView_movieDetail_durationLabel"
+                app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_date"
+                app:layout_constraintStart_toEndOf="@id/textView_movieDetail_durationLabel"
+                app:layout_constraintTop_toTopOf="@id/textView_movieDetail_durationLabel"
+                tools:text="Language" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_duration"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_budgetLabel"
+                app:layout_constraintEnd_toStartOf="@id/textView_movieDetail_language"
+                app:layout_constraintStart_toEndOf="@id/textView_movieDetail_date"
+                app:layout_constraintStart_toStartOf="@id/textView_movieDetail_durationLabel"
+                app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_durationLabel"
+                tools:text="Duration" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_language"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/textView_movieDetail_duration"
+                app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_languageLabel"
+                app:layout_constraintStart_toEndOf="@id/textView_movieDetail_duration"
+                app:layout_constraintTop_toTopOf="@id/textView_movieDetail_duration"
+                tools:text="Language" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_budgetLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_all_8dp"
+                app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_budget"
+                app:layout_constraintEnd_toStartOf="@id/textView_movieDetail_revenueLabel"
+                app:layout_constraintStart_toStartOf="@id/textView_movieDetail_duration"
+                app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_duration"
+                tools:text="Budget" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_revenueLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/textView_movieDetail_budgetLabel"
+                app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_language"
+                app:layout_constraintStart_toEndOf="@id/textView_movieDetail_budgetLabel"
+                app:layout_constraintTop_toTopOf="@id/textView_movieDetail_budgetLabel"
+                tools:text="Revenue" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_budget"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_genreLabel"
+                app:layout_constraintEnd_toStartOf="@id/textView_movieDetail_revenue"
+                app:layout_constraintStart_toStartOf="@id/textView_movieDetail_budgetLabel"
+                app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_budgetLabel"
+                tools:text="Budget" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_revenue"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/textView_movieDetail_budget"
+                app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_revenueLabel"
+                app:layout_constraintStart_toEndOf="@id/textView_movieDetail_budget"
+                app:layout_constraintTop_toTopOf="@id/textView_movieDetail_budget"
+                tools:text="Revenue" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_genreLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_all_8dp"
+                app:layout_constraintBottom_toTopOf="@id/flexBox_movieDetail_genresContainer"
+                app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_revenue"
+                app:layout_constraintStart_toStartOf="@id/textView_movieDetail_budget"
+                app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_budget"
+                tools:text="Genres" />
+
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/flexBox_movieDetail_genresContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_all_8dp"
+                app:dividerDrawable="@drawable/divider_flexbox"
+                app:flexWrap="wrap"
+                app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_overviewLabel"
+                app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_genreLabel"
+                app:layout_constraintStart_toStartOf="@id/textView_movieDetail_genreLabel"
+                app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_genreLabel"
+                app:showDivider="middle">
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:id="@+id/textView_movieDetail_overviewLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_all_8dp"
+                app:layout_constraintBottom_toTopOf="@id/textView_movieDetail_overview"
+                app:layout_constraintEnd_toEndOf="@id/flexBox_movieDetail_genresContainer"
+                app:layout_constraintStart_toStartOf="@id/flexBox_movieDetail_genresContainer"
+                app:layout_constraintTop_toBottomOf="@id/flexBox_movieDetail_genresContainer"
+                tools:text="Overview" />
+
+            <TextView
+                android:id="@+id/textView_movieDetail_overview"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_all_8dp"
+                android:layout_marginBottom="@dimen/margin_all_8dp"
+                app:layout_constraintEnd_toEndOf="@id/textView_movieDetail_overviewLabel"
+                app:layout_constraintStart_toStartOf="@id/textView_movieDetail_overviewLabel"
+                app:layout_constraintTop_toBottomOf="@id/textView_movieDetail_overviewLabel"
+                tools:text="XXXXXXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_movieDetail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/item_detail_placeholder" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

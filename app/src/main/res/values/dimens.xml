@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_all_8dp">8dp</dimen>
+    <dimen name="margin_all_16dp">16dp</dimen>
+    <dimen name="margin_all_24dp">24dp</dimen>
+    <dimen name="margin_all_32dp">32dp</dimen>
+
+    <dimen name="padding_all_8dp">8dp</dimen>
+    <dimen name="padding_all_16dp">16dp</dimen>
+    <dimen name="padding_all_24dp">24dp</dimen>
+    <dimen name="padding_all_32dp">32dp</dimen>
+
+    <dimen name="corner_all_8dp">8dp</dimen>
+    <dimen name="corner_all_16dp">16dp</dimen>
+    <dimen name="corner_all_24dp">24dp</dimen>
+    <dimen name="corner_all_32dp">32dp</dimen>
+    <dimen name="corner_all_72dp">72dp</dimen>
+
+    <dimen name="divider_flex_width">8dp</dimen>
+    <dimen name="divider_flex_height">8dp</dimen>
+    
+    <dimen name="profile_image_width">72dp</dimen>
+    <dimen name="profile_image_height">72dp</dimen>
+
+</resources>

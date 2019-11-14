@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_all_16dp"
+    tools:context=".ui.account.AccountActivity">
+
+    <TextView
+        android:id="@+id/textView_account_profileLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_all_8dp"
+        android:text="@string/account_profile"
+        app:layout_constraintBottom_toTopOf="@id/card_account_profileContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_account_profileContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_all_8dp"
+        app:cardCornerRadius="@dimen/corner_all_16dp"
+        app:layout_constraintEnd_toEndOf="@id/textView_account_profileLabel"
+        app:layout_constraintStart_toStartOf="@id/textView_account_profileLabel"
+        app:layout_constraintTop_toBottomOf="@id/textView_account_profileLabel">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_all_8dp">
+
+            <ImageView
+                android:id="@+id/imageView_account_image"
+                android:layout_width="@dimen/profile_image_width"
+                android:layout_height="@dimen/profile_image_height"
+                android:src="@drawable/ic_account_circle_accent_48dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textView_account_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_account_name"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_all_8dp"
+                android:gravity="center"
+                android:text="@string/dummy_profile_name"
+                app:layout_constraintBottom_toTopOf="@id/textView_account_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageView_account_image"
+                app:layout_constraintTop_toTopOf="@id/imageView_account_image" />
+
+            <TextView
+                android:id="@+id/textView_account_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/dummy_profile_email"
+                app:layout_constraintBottom_toBottomOf="@id/imageView_account_image"
+                app:layout_constraintEnd_toEndOf="@id/textView_account_name"
+                app:layout_constraintStart_toStartOf="@id/textView_account_name"
+                app:layout_constraintTop_toBottomOf="@id/textView_account_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textView_account_locationLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_all_8dp"
+        android:text="@string/account_your_location"
+        app:layout_constraintBottom_toTopOf="@id/card_account_locationContainer"
+        app:layout_constraintEnd_toEndOf="@id/card_account_profileContainer"
+        app:layout_constraintStart_toStartOf="@id/card_account_profileContainer"
+        app:layout_constraintTop_toBottomOf="@id/card_account_profileContainer" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_account_locationContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_all_8dp"
+        app:cardCornerRadius="@dimen/corner_all_16dp"
+        app:layout_constraintEnd_toEndOf="@id/textView_account_locationLabel"
+        app:layout_constraintStart_toStartOf="@id/textView_account_locationLabel"
+        app:layout_constraintTop_toBottomOf="@id/textView_account_locationLabel">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/map_account_location"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_account_grantPermission"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@android:color/background_light"
+                android:gravity="center"
+                android:text="@string/account_turn_on_the_map"
+                android:textColor="@color/colorAccent"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/map_account_location"
+                app:layout_constraintEnd_toEndOf="@id/map_account_location"
+                app:layout_constraintStart_toStartOf="@id/map_account_location"
+                app:layout_constraintTop_toTopOf="@id/map_account_location" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
