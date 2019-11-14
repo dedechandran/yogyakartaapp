@@ -84,15 +84,7 @@ class AccountActivity : BaseActivity(), OnMapReadyCallback {
         })
 
         textView_account_grantPermission.setOnClickListener {
-            if (accountViewModel?.getPermission()?.value?.status == PermissionStatus.BLOCKED) {
-                Toast.makeText(
-                    this,
-                    getString(R.string.account_message_permission_blocked),
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else {
-                requestLocationPermission()
-            }
+            requestLocationPermission()
         }
 
     }
